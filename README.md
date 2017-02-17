@@ -4,6 +4,15 @@
 
 A docker image based on debian to build software
 
+## Usage
+```bash
+alias d='docker run --rm -it -v $HOME:/root/ -v $PWD:/build dnmp-build $@'
+
+cd ~/Repositories/YOUR-PROJECT
+d composer install
+d npm install
+```
+
 ## Tools
 - php v7
 - composer

@@ -25,7 +25,7 @@ RUN \
     # install ...
     DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes --no-install-recommends \
         # general tools
-        openssl rsync git graphicsmagick nodejs build-essential rubygems ruby-dev ruby-compass \
+        ssh openssl rsync git graphicsmagick nodejs build-essential rubygems ruby-dev ruby-compass \
         #  php 7.0
         php7.0 php7.0-cli php7.0-common php7.0-curl php7.0-gd php7.0-mcrypt php7.0-mysql php7.0-soap \
         php7.0-json php7.0-zip php7.0-intl php7.0-bcmath php7.0-xsl php7.0-xml php7.0-mbstring php7.0-xdebug \
@@ -41,6 +41,15 @@ RUN \
     # install composer
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
 
+    # prepare build folder
+    mkdir /build && \
+
     # cleanup
     apt-get clean && \
     rm -rf /tmp/*
+
+# define volumes
+VOLUME ["/build"]
+
+# define workdir
+WORKDIR /build
