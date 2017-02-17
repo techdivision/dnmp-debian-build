@@ -1,0 +1,13 @@
+# dnmp debian
+[![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://registry.hub.docker.com/u/techdivision/dnmp-debian/)
+[![Docker Automated build](https://img.shields.io/docker/automated/techdivision/dnmp-debian-build.svg)]()
+
+A docker image based on debian to build software
+
+## Tools
+- php v7
+- composer
+- nodejs
+- compass
+- sass
+- gulp
