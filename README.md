@@ -6,7 +6,7 @@ A docker image based on debian to build software
 
 ## Usage
 ```bash
-alias d='docker run --rm -it -v $HOME:/root/ -v $PWD:/build dnmp-build $@'
+alias d='docker run --rm -it -v $HOME:/root/ -v $PWD:/build techdivision/dnmp-debian-build $@'
 
 cd ~/Repositories/YOUR-PROJECT
 d composer install
