@@ -1,4 +1,4 @@
-# dnmp debian
+# dnmp debian build
 [![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://registry.hub.docker.com/u/techdivision/dnmp-debian/)
 [![Docker Automated build](https://img.shields.io/docker/automated/techdivision/dnmp-debian-build.svg)]()
 
