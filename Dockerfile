@@ -10,7 +10,7 @@ RUN \
     # install base tools
     apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes --no-install-recommends \
-        vim tar wget curl apt-transport-https ca-certificates net-tools htop python-pip && \
+        vim tar wget curl apt-transport-https ca-certificates net-tools htop python-pip pv && \
 
     # copy repository files
     cp -r /tmp/etc/apt /etc && \
@@ -40,6 +40,7 @@ RUN \
 
     # install composer
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
+    composer global require hirak/prestissimo && \
 
     # prepare build folder
     mkdir /build && \
